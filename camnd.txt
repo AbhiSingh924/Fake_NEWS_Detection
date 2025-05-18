@@ -1,0 +1,17 @@
+delete esisting/broken .venv file :
+    Remove-Item -Recurse -Force .venv
+
+Recreate the virtual environment
+    1. python -m venv .venv
+    2. .\.venv\Scripts\Activate.ps1
+    ***NOTE*** run below(3rd) command only if you get permission error else no need
+    3. Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned. 
+    4. .\.venv\Scripts\Activate.ps1
+    Install dependencies
+    5. pip install -r requirements.txt
+                or
+       pip install streamlit pandas scikit-learn numpy
+
+
+Run Streamlit
+    streamlit run app.py
